@@ -1,7 +1,12 @@
-# dev-challenge
+# _Dev Challenge_
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### _This webpage is a dev challenge to render a component using Ember_
+
+#### By _**Erica Wright**_
+
+## Description
+
+This webpage was completed for a code challenge to take an API endpoint and render a component to convert currency.
 
 ## Prerequisites
 
@@ -14,32 +19,32 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/ericaw21/dev-challenge` https://github.com/ericaw21/dev-challenge
 * `cd dev-challenge`
 * `npm install`
+
+## Support and contact details
+
+_Please contact ericaw21@gmail.com for questions or concerns._
+
+## Technologies
+
+* _Javascript_
+* _jQuery_
+* _Node_
+* _Ember_
+* _CSS_
+* _HTML_
 
 ## Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
 ### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
@@ -48,3 +53,9 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## License
+
+*MIT License*
+
+Copyright (c) 2017 Erica Wright All Rights Reserved.
