@@ -15,7 +15,11 @@ export default Ember.Component.extend({
             var convertToWhat = From.concat(To);
             ajax({
                 url: 'https://citadel-miner.appspot.com/data/v1/converter?set=devtest',
-                type: 'get'
+                type: 'get',
+                crossDomain: true,
+                headers: {
+                    'Access-Control-Allow-Origin': '*'
+                }
             })
             .then(converterResponse => {
                 var conversionValue = this.amount * converterResponse[From].quotes[convertToWhat];
