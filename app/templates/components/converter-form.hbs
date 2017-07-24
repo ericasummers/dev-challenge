@@ -26,3 +26,8 @@
 
     <button class="btn" {{action 'convertCurrency'}}>Convert</button>
 </form>
+
+<br>
+{{#if finalConversion}}
+    {{amount}} {{currencyFrom}} is equal to {{finalConversion}}
+{{/if}}
