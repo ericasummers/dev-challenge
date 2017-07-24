@@ -1,11 +1,21 @@
 <form>
     <div class="form-group">
-        <label for="currency-from">From:</label>
-        {{input value=currency-from id="currency-from"}}
-    {{!-- </div>
-    <div class="form-group"> --}}
-        <label for="currency-to">To:</label>
-        {{input value=currency-to id="currency-to"}}
+        <label for="currency-from">FROM</label>
+
+        <label for="currency-to">TO</label>
+    </div>
+    <div class="form-group">
+        <select onchange={{action (mut currencyFrom) value="target.value" id="currency-from"}}>
+            {{#each currenciesFrom as |currencyChoice|}}
+                <option value={{currencyChoice}} selected={{eq currency currencyChoice}}>{{currencyChoice}}</option>
+            {{/each}}
+        </select>
+
+        <select onchange={{action (mut currencyTo) value="target.value" id="currency-to"}}>
+            {{#each currenciesTo as |currencyChoice|}}
+                <option value={{currencyChoice}} selected={{eq currency currencyChoice}}>{{currencyChoice}}</option>
+            {{/each}}
+        </select>
     </div>
     <div class="form-group">
         <label for="amount">Amount:</label>
