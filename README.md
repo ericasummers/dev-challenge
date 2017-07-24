@@ -8,6 +8,12 @@
 
 This webpage was completed for a code challenge to take an API endpoint and render a component to convert currency.
 
+## Live Demo
+
+Please visit the following URL to try out a live version of this project: [Demo Link](http://jazzy-rake.surge.sh/)
+
+*(Note: Please make sure to have the Chrome "Allow CORS" extension enabled in order for this to work)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
