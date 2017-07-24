@@ -18,7 +18,6 @@ export default Ember.Component.extend({
                 type: 'get'
             })
             .then(converterResponse => {
-                console.log(converterResponse);
                 var conversionValue = this.amount * converterResponse[From].quotes[convertToWhat];
                 this.set('finalConversion', conversionValue.toFixed(2) + ' ' + To);
             });
