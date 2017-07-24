@@ -1,6 +1,6 @@
 # _Dev Challenge_
 
-#### _This webpage is a dev challenge to render a component using Ember_
+#### _This webpage is a dev challenge to convert currency using an API key_
 
 #### By _**Erica Wright**_
 
@@ -15,7 +15,6 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
@@ -30,7 +29,6 @@ _Please contact ericaw21@gmail.com for questions or concerns._
 ## Technologies
 
 * _Javascript_
-* _jQuery_
 * _Node_
 * _Ember_
 * _CSS_
