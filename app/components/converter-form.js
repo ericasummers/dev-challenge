@@ -19,10 +19,14 @@ export default Ember.Component.extend({
                 type: 'get'
             })
             .then(converterResponse => {
-                var conversionValue = amount * converterResponse.From.quotes.convertToWhat;
+                console.log(converterResponse);
+                console.log(converterResponse[From]);
+                console.log('converToWhat ', convertToWhat);
+                console.log(converterResponse[From].quotes);
+                var conversionValue = amount * converterResponse[From].quotes[convertToWhat];
 
-                console.log(conversionValue + From);
-                return conversionValue + To;
+                console.log(conversionValue.toFixed(2) + ' ' + To);
+                return conversionValue.toFixed(2) + ' ' + To;
             });
         }
     }
