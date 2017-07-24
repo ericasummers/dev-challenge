@@ -13,8 +13,9 @@ export default Ember.Component.extend({
             var To = this.currencyTo;
             this.set('amount', this.get('amount'));
             var convertToWhat = From.concat(To);
+            var url = 'https://citadel-miner.appspot.com/data/v1/converter?set=devtest';
             ajax({
-                url: 'https://citadel-miner.appspot.com/data/v1/converter?set=devtest',
+                url: url,
                 type: 'get',
                 crossDomain: true,
                 headers: {
