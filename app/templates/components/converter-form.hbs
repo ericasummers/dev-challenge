@@ -1,33 +1,46 @@
 <form>
     <div class="form-group">
-        <label for="currency-from">FROM</label>
-
-        <label for="currency-to">TO</label>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="currency-from">FROM</label>
+            </div>
+            <div class="col-md-6">
+                <label for="currency-to">TO</label>
+            </div>
+        </div>
     </div>
     <div class="form-group">
-         <select onchange={{action (mut currencyFrom) value="target.value"}}>
-            <option selected disabled>Select</option>
-            {{#each currencies as |currencyFromChoice|}}
-                <option value={{currencyFromChoice}} selected={{eq currencyFrom currencyFromChoice}}>{{currencyFromChoice}}</option>
-            {{/each}}
-        </select>  
-
-         <select onchange={{action (mut currencyTo) value="target.value"}}>
-            <option selected disabled>Select</option>
-            {{#each currencies as |currencyToChoice|}}
-                <option value={{currencyToChoice}} selected={{eq currencyTo currencyToChoice}}>{{currencyToChoice}}</option>
-            {{/each}}
-        </select> 
+        <div class="row">
+            <div class="col-md-6">
+                <select onchange={{action (mut currencyFrom) value="target.value"}} class="form-control" id="fromChoice">
+                    <option selected disabled>Select</option>
+                    {{#each currencies as |currencyFromChoice|}}
+                        <option value={{currencyFromChoice}} selected={{eq currencyFrom currencyFromChoice}}>{{currencyFromChoice}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select onchange={{action (mut currencyTo) value="target.value"}} class="form-control" id="toChoice">
+                    <option selected disabled>Select</option>
+                    {{#each currencies as |currencyToChoice|}}
+                        <option value={{currencyToChoice}} selected={{eq currencyTo currencyToChoice}}>{{currencyToChoice}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
     </div>
     <div class="form-group">
         <label for="amount">Amount:</label>
-        {{input value=amount id="amount" placeholder="Enter amount"}}
+        {{input value=amount id="amount" placeholder="Enter amount" class="form-control"}}
     </div>
-
-    <button class="btn" {{action 'convertCurrency'}}>Convert</button>
+    <div class="button">
+        <button class="btn btn-lg convert-btn" {{action 'convertCurrency'}}>CONVERT</button>
+    </div>
 </form>
 
 <br>
-{{#if finalConversion}}
-    {{amount}} {{currencyFrom}} is equal to {{finalConversion}}
-{{/if}}
+<div class="result">
+    {{#if finalConversion}}
+        <h3>{{amount}} {{currencyFrom}} is equal to <span class="result-number">{{finalConversion}}</span></h3>
+    {{/if}}
+</div>
